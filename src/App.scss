@@ -1,0 +1,191 @@
+.App {
+  text-align: center;
+  font-family: markpro;
+  flex-direction: column;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  background-color: #e5e5e5;
+}
+
+//main font
+
+@font-face {
+  font-family: markpro;
+  src: url("./assets/font/MARKPROEXTRALIGHT.OTF");
+  font-weight: 200;
+}
+@font-face {
+  font-family: markpro;
+  src: url("./assets/font/MARKPROLIGHT.OTF");
+  font-weight: 300;
+}
+@font-face {
+  font-family: markpro;
+  src: url("./assets/font/MARKPROMEDIUM.OTF");
+  font-weight: 400;
+}
+@font-face {
+  font-family: markpro;
+  src: url("./assets/font/MARKPRO.OTF");
+  font-weight: 500;
+}
+@font-face {
+  font-family: markpro;
+  src: url("./assets/font/MARKPROMEDIUM.OTF");
+  font-weight: 400;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  z-index: 0;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 25.35px;
+  margin-top: 24px;
+  margin-bottom: 400px;
+
+  &--underline {
+    text-decoration: underline;
+  }
+}
+.circle {
+  width: 312px;
+  height: 312px;
+  // background: #cc5511;
+  border: 1px solid #464542;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  // margin: auto;
+  border-radius: 50%;
+  margin-top: 200px;
+  margin-left: auto;
+  margin-right: auto;
+
+  &--secondary {
+    margin-top: 0;
+    position: relative;
+    border: 8px solid #cc5511;
+    clip: rect(auto, auto, auto, auto);
+    transform: rotate(108deg);
+  }
+}
+
+.dot {
+  border: 1px solid #a6a6a6;
+  width: 30px;
+  height: 30px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: rotate(-27.2deg) translate(-156px);
+
+  overflow: hidden;
+  margin: auto;
+  &--reset {
+    animation: dot 2.2s ease-in-out;
+    animation-fill-mode: forwards;
+  }
+}
+
+@keyframes dot {
+  0% {
+    transform: rotate(-27.2deg) translate(-156px) rotate(27.2deg);
+  }
+  100% {
+    transform: rotate(-270deg) translate(-156px) rotate(270deg);
+  }
+}
+
+.card-div {
+  display: flex;
+  align-items: center;
+  z-index: 100;
+  overflow: visible;
+}
+
+.refresh-title {
+  margin-top: 27px;
+}
+
+.refresh-button {
+  height: 48px;
+  width: 291px;
+  margin: auto;
+  border: 2px solid #cc5511;
+  color: #cc5511;
+  box-sizing: border-box;
+  border-radius: 50px;
+  background-color: #e5e5e5;
+  font-weight: 700;
+  font-size: 14px;
+  margin-top: 53px;
+  margin-bottom: 83.29px;
+}
+
+.dots-container {
+  display: flex;
+  justify-content: center;
+}
+
+.dots {
+  width: 63px;
+  height: 13.4px;
+  display: block;
+}
+
+.main {
+  height: 706px;
+}
+
+.card-div {
+  width: 312px;
+  position: relative;
+  margin-top: -315px;
+  height: 312px;
+  &__numbers {
+    width: 309px;
+    height: 207px;
+    position: absolute;
+    top: 252px;
+    left: 35px;
+  }
+  &__number-box {
+    margin-top: 90px;
+    margin-bottom: 30px;
+  }
+  &__lower-box {
+    display: flex;
+    margin-left: 90px;
+  }
+  &__pin {
+    margin-right: 15px;
+    border: 1px dashed black;
+  }
+  &__expiry {
+    border: 1px dashed black;
+  }
+  &__text {
+    margin-left: 35px;
+    display: flex;
+    border: 1px dashed black;
+    width: fit-content;
+  }
+}
+
+//  border-style: 1px dashed black;
